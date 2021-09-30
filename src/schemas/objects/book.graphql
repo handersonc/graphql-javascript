@@ -1,0 +1,6 @@
+#import "objects/author.graphql"
+
+type Book {
+  title: String
+  author: Author
+}
