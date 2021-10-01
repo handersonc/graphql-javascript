@@ -1,13 +1,11 @@
-var { graphql, buildSchema } = require('graphql');
+// node-graphql/src/index.js
 
-var schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
+const { ApolloServer } = require('apollo-server')
+const { typeDefs } = require('./schema')
+const { resolvers } = require('./resolvers')
 
-var root = { hello: () => 'Hello world!' };
+const port = process.env.PORT || 9090;
 
-graphql(schema, '{ hello }', root).then((response) => {
-  console.log(response);
-});
+const server = new ApolloServer({ resolvers, typeDefs });
+
+server.listen({ port }, () => console.log(`Server runs at: http://localhost:${port}`));

@@ -1,0 +1,5 @@
+{
+  "name": "Veritext GraphQL Schema",
+  "schemaPath": "./src/schema/schema.graphql",
+  "includes": ["./src/schema/**/*.graphql"]
+}

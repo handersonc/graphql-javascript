@@ -1,24 +1,20 @@
 {
-  "name": "demo1",
+  "name": "node-graphql",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "description": "Grapghql API with Nodejs, Prisma, Postgres and Docker",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-config-standard-jsx": "^10.0.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-standard": "^5.0.0"
-  },
   "dependencies": {
-    "apollo-server-express": "^3.3.0",
-    "express": "^4.17.1",
-    "graphql": "^15.6.0"
+    "@prisma/client": "^2.29.1",
+    "apollo-server": "^3.1.2",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "prisma": "^2.29.1"
   }
 }
