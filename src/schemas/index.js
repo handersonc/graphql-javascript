@@ -1,8 +1,9 @@
 'use strict'
 
-const { gql } = require('apollo-server')
-const fs = require('fs')
-const path = require('path')
+const { gql } = require('apollo-server');
+const fs = require('fs');
+const path = require('path');
+const resolvers = require('../resolvers');
 
 const typeDefDirs = [
   'enums',
@@ -27,4 +28,4 @@ for (let typeDefDir of typeDefDirs) {
 
 const typeDefs = gql(RootSchema + '\n' + loadedTypeDefs)
 
-module.exports = { typeDefs }
+module.exports = { typeDefs, resolvers }
